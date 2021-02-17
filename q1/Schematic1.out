@@ -1,0 +1,74 @@
+
+**** 02/17/21 08:52:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\boruto_uz\Desktop\edc\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Feb 17 08:51:33 2021
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+R_R3         $N_0002 $N_0001  1k  
+R_R2         $N_0001 $N_0003  800  
+R_R1         $N_0004 $N_0001  500  
+I_I1         $N_0002 $N_0002 DC 50mA  
+V_Vs         $N_0004 $N_0002 200V
+R_R4         $N_0002 $N_0002  200  
+V_Vy         $N_0003 $N_0002 0V
+V_Vx         $N_0002 $N_0002 0V
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R3            R3(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=$N_0001 2=$N_0003 )
+R_R1            R1(1=$N_0004 2=$N_0001 )
+I_I1            I1(+=$N_0002 -=$N_0002 )
+V_Vs            Vs(+=$N_0004 -=$N_0002 )
+R_R4            R4(1=$N_0002 2=$N_0002 )
+V_Vy            Vy(+=$N_0003 -=$N_0002 )
+V_Vx            Vx(+=$N_0002 -=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+ERROR -- Node $N_0002 is floating
+ERROR -- Node $N_0001 is floating
+ERROR -- Node $N_0003 is floating
+ERROR -- Node $N_0004 is floating
+ERROR -- Voltage source and/or inductor loop involving V_Vx
+You may break the loop by adding a series resistance

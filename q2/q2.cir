@@ -1,0 +1,12 @@
+****EXAMPLE2.CIR****
+Vs 1 0 DC 20V;
+R1 1 2 500;
+R2 2 5 800;
+R3 2 3 1K;
+R4 0 4 200;
+Vx 3 0 DC 0V;
+Vy 5 4 DC 0V;
+Is 0 4 DC 50mA;
+.DC Vs 10 30 10;
+.PRINT DC V(4) I(Vx) I(Vy);
+.END;

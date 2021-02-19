@@ -1,0 +1,74 @@
+
+**** 02/19/21 18:15:09 *********** Evaluation PSpice (Nov 1999) **************
+
+ ***example1.CIR****
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+Vs 1 0 DC 20V;
+Vx 3 0 DC 0V;
+Vy 5 4 DC 0V;
+R1 1 2 500;
+R3 2 3 1K;
+R2 2 5 800;
+R4 4 0 200;
+Is 0 4 DC 50mA;
+.op;
+.end;
+
+**** 02/19/21 18:15:09 *********** Evaluation PSpice (Nov 1999) **************
+
+ ***example1.CIR****
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    1)   20.0000  (    2)   12.5000  (    3)    0.0000  (    4)   10.5000      
+
+(    5)   10.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    Vs          -1.500E-02
+    Vx           1.250E-02
+    Vy           2.500E-03
+
+    TOTAL POWER DISSIPATION   3.00E-01  WATTS
+
+
+**** 02/19/21 18:15:09 *********** Evaluation PSpice (Nov 1999) **************
+
+ ***example1.CIR****
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

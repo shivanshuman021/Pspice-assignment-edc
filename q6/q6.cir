@@ -1,0 +1,13 @@
+**************QUESTION6******************
+Vin 1 0 DC 1V;
+R1 1 2 1K;
+R2 2 0 20K;
+Rp 2 6 1.5K;
+Re 3 0 250;
+F1 4 3 Vx 40;
+Ro 4 3 100K;
+Rc 4 5 2K;
+Vx 6 3 DC 0V;
+Vy 5 0 DC 0V;
+.TF v(4) Vin;
+.END;

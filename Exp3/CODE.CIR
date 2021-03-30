@@ -1,0 +1,15 @@
+**************Que6***********
+VS 1 0 DC 20;
+IS 0 4 DC 50mA;
+R1 1 2 500;
+R2 2 5 800;
+R3 2 3 1K;
+R4 4 0 200;
+VX 3 0 DC 0V;
+VY 5 4 DC 0V;
+.DC VS LIST 5 20 30 IS 50mA 150mA 50mA;
+.PRINT DC V(4) I(VX) I(VY);
+.PLOT DC I(VY);
+.PROBE;
+.END;
+

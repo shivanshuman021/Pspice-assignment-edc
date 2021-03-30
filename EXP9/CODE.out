@@ -1,0 +1,77 @@
+
+**** 03/30/21 22:09:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ **************QUES9**********************
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+VGS 1 0 DC 5V;
+VDS 2 0 DC 5V;
+M1 2 1 0 0 MOS1 W=5u L=1u;
+.MODEL MOS1 NMOS VTO=0.7 KP=110V LAMBDA=0.4 PHI=0.7 GAMMA=0;
+.DC VDS 0 5 0.2 VGS 1 5 1;
+.PROBE;
+.END;
+
+WARNING -- LAMBDA for MOSFET model MOS1 is unusually
+           large and might cause nonconvergence
+
+**** 03/30/21 22:09:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ **************QUES9**********************
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MOS1            
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO     .7          
+          KP  110            
+       GAMMA    0            
+         PHI     .7          
+      LAMBDA     .4          
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+WARNING -- LAMBDA for MOSFET model MOS1 is unusually
+           large and might cause nonconvergence
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

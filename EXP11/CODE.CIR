@@ -1,0 +1,23 @@
+***EXAMPLE11.CIR****
+rs 1 2 500;
+r1 7 3 47k;
+r2 3 0 5k;
+rc 7 4 10k;
+re 5 0 2k;
+rl 6 0 20k;
+c1 2 3 1u;
+ce 5 0 10u;
+c2 4 6 1u;
+q1 4 3 5 0 qm;
+.model qm pnp(is=2E-16 bf=100 br=1 rb=5 cje=-0.4pf rc=1 re=0 tf=0.2ns tr=5ns
++ vje=0.8 me=0.4 cjc=0.5pf vjc=0.8 va=100 ccs=1pf);
+vcc 0 7 dc 15;
+vin 1 0 ac 10m sin( 0 10m 1k);
+.plot tran v(4) v(6) v(1);
+.plot ac vm(6) vp(6);
+.options nopage noecho;
+.tran/op 50u 2m;
+.ac dec 10 1hz 10khz;
+.op;
+.probe;
+.end;
